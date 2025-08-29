@@ -14,4 +14,4 @@
 	 - Descrizione a piacere
 	 - *Packaging*: **war**
 	 - Dipendenze: **Spring Web** e **OpenAI**
- 3. Da terminale, eseguire mvn spring-boot:run
+ 3. Da terminale, eseguire `mvn sprin-boot:run`
