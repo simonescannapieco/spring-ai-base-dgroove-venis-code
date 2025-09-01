@@ -10,8 +10,8 @@
 	 - *Build tool* Maven
 	 - Spring Boot più recente **NON SNAPSHOT**
 	 - *Group*: it.venis.ai.spring
-	 - *Artifact*: spring_ai_intro
+	 - *Artifact*: demo
 	 - Descrizione a piacere
-	 - *Packaging*: **war**
+	 - *Packaging*: **jar**
 	 - Dipendenze: **Spring Web** e **OpenAI**
  3. Da terminale, eseguire `mvn spring-boot:run`
