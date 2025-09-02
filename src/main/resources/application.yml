@@ -1,3 +1,6 @@
 spring:
   application:
     name: demo
+  ai:
+    openai:
+      api-key: ${GOOGLE_AI_API_KEY}
