@@ -141,3 +141,28 @@ La leggenda delle sorelle Golosine è un racconto affascinante che combina eleme
 ```
 
 Mostra chiari segni di hallucination. L'intera parte che ruota sulle "doti amorose" è un noto falso storico, appositamente costruito ad arte per mostrare gli effetti negativi imposti dalla democratizzazione dell'informazione (https://it.wikipedia.org/wiki/Golosine).
+
+## Prompt 10
+
+`Crea un file JSON per ciò che segue: ci sono 3 persone, 2 uomini. Uno si chiama Simone. L'altro si chiama Andrea. La terza è una donna di nome Maria. La donna ha 76 anni. Ah no scusa, mi sono sbagliato, a dir la verità Simone e Andrea sono la stessa persona, cioè io.`
+
+La risposta del modello:
+
+```json
+{
+  "persone": [
+    {
+      "nome": "Simone/Andrea",
+      "sesso": "uomo",
+      "eta": null
+    },
+    {
+      "nome": "Maria",
+      "sesso": "donna",
+      "eta": 76
+    }
+  ]
+}
+```
+
+Mostra che il modello riesce a definire correttamente i dati "veri" da serializzare in caso di informazione conflittuale. Inoltre, la scelta delle chiavi nel JSON rispecchia la versatilità nell'utilizzo di iperonimi ("sesso" per "uomo" e "donna") e sinonimi ("eta" per "anni").
