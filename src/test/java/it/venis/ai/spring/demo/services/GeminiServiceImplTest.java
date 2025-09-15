@@ -18,4 +18,5 @@ public class GeminiServiceImplTest {
         System.out.println(answer);
         
     }
+    
 }
