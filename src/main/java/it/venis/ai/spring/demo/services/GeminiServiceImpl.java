@@ -6,6 +6,9 @@ import org.springframework.ai.chat.prompt.Prompt;
 import org.springframework.ai.chat.prompt.PromptTemplate;
 import org.springframework.stereotype.Service;
 
+import it.venis.ai.spring.demo.model.Answer;
+import it.venis.ai.spring.demo.model.Question;
+
 @Service
 public class GeminiServiceImpl implements GeminiService {
 
@@ -17,6 +20,7 @@ public class GeminiServiceImpl implements GeminiService {
         
     }
 
+    @Override
     public String getAnswer(String question) {
 
         PromptTemplate promptTemplate = new PromptTemplate(question);
@@ -27,6 +31,13 @@ public class GeminiServiceImpl implements GeminiService {
 
         return response.getResult().getOutput().getText();
 
+    }
+
+    @Override
+    public Answer getAnswer(Question question) {
+
+        return new Answer(question.question());
+    
     }
 
 }
