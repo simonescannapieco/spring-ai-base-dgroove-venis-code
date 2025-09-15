@@ -29,14 +29,16 @@ sostituire l'essere umano nei processi decisionali?
 
 La risposta del modello:
 
-`Ecco il ragionamento passo passo:
+```
+Ecco il ragionamento passo passo:
 
 1. **Inizio:** Ci sono tre assassini nella stanza.
 2. **Azione:** Una persona (che non sappiamo se sia un assassino) entra e uccide uno degli assassini.
 3. **Stato:** Inizialmente, l'assassino ucciso non è più un assassino (è morto). Gli altri due sono ancora assassini. La persona che ha commesso l'omicidio potrebbe essere o non essere un assassino.
 4. **Risultato:** Nella stanza rimangono due assassini (quelli sopravvissuti) e potenzialmente la persona che ha commesso l'omicidio.
 
-**Risposta:** Rimangono due assassini nella stanza.`
+**Risposta:** Rimangono due assassini nella stanza.
+```
 
 Mostra quanto il ragionamento logico non sia il suo forte.
 
@@ -46,7 +48,7 @@ Mostra quanto il ragionamento logico non sia il suo forte.
 
 La risposta del modello:
 
-`
+```
 Certo, ecco 10 frasi che terminano con la parola "gatto":
 
 1.  Ho visto un grosso topo correre via, inseguito dal mio **gatto**.
@@ -59,7 +61,7 @@ Certo, ecco 10 frasi che terminano con la parola "gatto":
 8.  Ho trovato un tenero micino abbandonato, che ora è il mio **gatto**.
 9.  Il suo animale domestico preferito è senza dubbio il suo **gatto**.
 10. Il mio cane e il mio **gatto** sono diventati grandi amici.
-`
+```
 
 Mostra due cose interessanti. La prima mostra la sua impotenza nei confronti della sua stessa strategia di generazione: non ha il completo controllo su cosa scegliere come prossima parola, se non attrverso il vincolo della probabilità. Se la parola **gatto** non ha la probabilità più alta, non la può scegliere!
 
@@ -68,7 +70,7 @@ Mostra due cose interessanti. La prima mostra la sua impotenza nei confronti del
 
 La risposta del modello:
 
-`
+```
 To solve the expression 25 - 4 * 2 + 3, we need to follow the order of operations, which is often remembered by the acronym PEMDAS (Parentheses, Exponents, Multiplication and Division from left to right, Addition and Subtraction from left to right).
 
 In this expression, we have subtraction, multiplication, and addition. First, we perform the multiplication:
@@ -89,7 +91,7 @@ Finally, we perform the addition:
 So, 25 - 4 * 2 + 3 = 20.
 
 Final Answer: The final answer is $\boxed{20}$
-`
+```
 
 Mostra non solo che applica correttamente la regola di priorità dell operazioni standard, ma anche che, se nel prompt il modello non può risalire ad alcun linguaggio specifico, prediligerà sempre la risposta in lingua inglese.
 
@@ -99,7 +101,7 @@ Mostra non solo che applica correttamente la regola di priorità dell operazioni
 
 La risposta del modello:
 
-`
+```
 Ecco il ragionamento passo per passo:
 
 1. **Ogni maglietta si asciuga indipendentemente:** Il tempo di asciugatura di una maglietta non è influenzato dal numero di altre magliette stese vicino.  Il sole e l'aria agiscono su ogni maglietta singolarmente.
@@ -109,6 +111,6 @@ Ecco il ragionamento passo per passo:
 3. **Numero di magliette non influisce sul tempo:** Anche se stendiamo 20 magliette, ognuna di esse impiegherà comunque 4 ore per asciugarsi.
 
 **Risposta:** Ci vorranno 4 ore per asciugare 20 magliette.
-`
+```
 
 Mostra il lato 'intuitivo' del modello: dà per assunto che non vi siano restrizioni di spazio e che quindi la stesura delle magliette possa essere fatta come processo parallelo!
