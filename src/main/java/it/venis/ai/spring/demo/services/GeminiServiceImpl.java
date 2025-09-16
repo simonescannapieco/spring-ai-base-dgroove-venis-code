@@ -36,7 +36,7 @@ public class GeminiServiceImpl implements GeminiService {
     @Override
     public Answer getAnswer(Question question) {
 
-        return new Answer(question.question());
+        return new Answer(getAnswer(question.question()));
     
     }
 
