@@ -33,6 +33,33 @@
 				}
 			},
 			"response": []
+		},
+		{
+			"name": "LLM come dizionario",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\"lemma\": \"gatto\"}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "localhost:8080/definition",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"definition"
+					]
+				}
+			},
+			"response": []
 		}
 	]
 }

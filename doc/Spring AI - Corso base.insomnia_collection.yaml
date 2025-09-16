@@ -31,6 +31,31 @@ collection:
         send: true
         store: true
       rebuildPath: true
+  - url: http://localhost:8080/definition
+    name: LLM come dizionario
+    meta:
+      id: req_5736ae443a02444bbdb7ddb5b59cc42f
+      created: 1758016737467
+      modified: 1758016809277
+      isPrivate: false
+      sortKey: -1758016737467
+    method: POST
+    body:
+      mimeType: application/json
+      text: '{"lemma": "gatto"}'
+    headers:
+      - name: Content-Type
+        value: application/json
+      - name: User-Agent
+        value: insomnia/11.0.2
+    settings:
+      renderRequestBody: true
+      encodeUrl: true
+      followRedirects: global
+      cookies:
+        send: true
+        store: true
+      rebuildPath: true
 cookieJar:
   name: Default Jar
   meta:
