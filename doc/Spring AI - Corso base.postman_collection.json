@@ -1,0 +1,38 @@
+{
+	"info": {
+		"_postman_id": "18182f75-42b7-470d-879d-a1f74bd96546",
+		"name": "Spring AI - Corso base",
+		"description": "Chiamate API all'applicativo demo Spring AI creato durante il corso di Spring AI base.",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "13237634"
+	},
+	"item": [
+		{
+			"name": "Chiedi ad LLM",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\"question\": \"Come posso far capire meglio ai miei studenti come funziona Spring AI?\"}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "localhost:8080/ask",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"ask"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
