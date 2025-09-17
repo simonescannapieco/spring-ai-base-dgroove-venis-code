@@ -13,5 +13,5 @@
 	 - *Artifact*: demo
 	 - Descrizione a piacere
 	 - *Packaging*: **jar**
-	 - Dipendenze: **Spring Web** e **OpenAI**
+	 - Dipendenze: **Spring Web** e **Vertex AI Gemini**
  3. Da terminale, eseguire `mvn spring-boot:run`
