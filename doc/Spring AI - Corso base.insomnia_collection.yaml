@@ -5,14 +5,14 @@ meta:
   created: 1758010304268
   modified: 1758010304268
 collection:
-  - url: http://localhost:8080/ask
-    name: Chiedi ad LLM
+  - url: http://localhost:8080/client/ask
+    name: Chiedi ad LLM (ChatClient)
     meta:
       id: req_0c74dc2378604c82a2da9ea79aeb039b
       created: 1758010332874
-      modified: 1758010463314
+      modified: 1758182241712
       isPrivate: false
-      sortKey: -1758010332874
+      sortKey: -1758016737567
     method: POST
     body:
       mimeType: application/json
@@ -31,14 +31,65 @@ collection:
         send: true
         store: true
       rebuildPath: true
-  - url: http://localhost:8080/definition
-    name: LLM come dizionario
+  - url: http://localhost:8080/client/definition
+    name: LLM come dizionario (ChatClient)
     meta:
       id: req_5736ae443a02444bbdb7ddb5b59cc42f
       created: 1758016737467
-      modified: 1758016809277
+      modified: 1758182286823
       isPrivate: false
       sortKey: -1758016737467
+    method: POST
+    body:
+      mimeType: application/json
+      text: '{"lemma": "gatto"}'
+    headers:
+      - name: Content-Type
+        value: application/json
+      - name: User-Agent
+        value: insomnia/11.0.2
+    settings:
+      renderRequestBody: true
+      encodeUrl: true
+      followRedirects: global
+      cookies:
+        send: true
+        store: true
+      rebuildPath: true
+  - url: http://localhost:8080/model/ask
+    name: Chiedi ad LLM (ChatModel)
+    meta:
+      id: req_e46bd63a48394d9ab3c3859e22823edf
+      created: 1758182255733
+      modified: 1758182260882
+      isPrivate: false
+      sortKey: -1758016737517
+    method: POST
+    body:
+      mimeType: application/json
+      text: '{"question": "Come posso far capire meglio ai miei studenti come funziona
+        Spring AI?"}'
+    headers:
+      - name: Content-Type
+        value: application/json
+      - name: User-Agent
+        value: insomnia/11.0.2
+    settings:
+      renderRequestBody: true
+      encodeUrl: true
+      followRedirects: global
+      cookies:
+        send: true
+        store: true
+      rebuildPath: true
+  - url: http://localhost:8080/model/definition
+    name: LLM come dizionario (ChatModel)
+    meta:
+      id: req_85a955f67b8f4c8f928bb01720d3b015
+      created: 1758182296443
+      modified: 1758182300073
+      isPrivate: false
+      sortKey: -1751974708202.5
     method: POST
     body:
       mimeType: application/json

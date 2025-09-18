@@ -5,35 +5,34 @@ import org.springframework.web.bind.annotation.RestController;
 import it.venis.ai.spring.demo.model.Answer;
 import it.venis.ai.spring.demo.model.DefinitionRequest;
 import it.venis.ai.spring.demo.model.Question;
-import it.venis.ai.spring.demo.services.GeminiService;
+import it.venis.ai.spring.demo.services.GeminiFromModelService;
 
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestBody;
 
-
 @RestController
-public class QuestionController {
+public class QuestionFromModelController {
 
-    private final GeminiService geminiService;
+    private final GeminiFromModelService geminiService;
 
-    public QuestionController(GeminiService geminiService) {
+    public QuestionFromModelController(GeminiFromModelService geminiService) {
 
         this.geminiService = geminiService;
 
     }
-    
-    @PostMapping("/ask")
+
+    @PostMapping("/model/ask")
     public Answer askQuestion(@RequestBody Question question) {
-        
-        return geminiService.getAnswer(question);
+
+        return this.geminiService.getAnswerFromModel(question);
 
     }
 
-    @PostMapping("/definition")
+    @PostMapping("/model/definition")
     public Answer getDefinition(@RequestBody DefinitionRequest definitionRequest) {
 
-        return this.geminiService.getDefinition(definitionRequest);
-        
+        return this.geminiService.getDefinitionFromModel(definitionRequest);
+
     }
-    
+
 }

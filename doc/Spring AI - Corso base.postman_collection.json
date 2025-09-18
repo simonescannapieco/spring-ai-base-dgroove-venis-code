@@ -8,7 +8,35 @@
 	},
 	"item": [
 		{
-			"name": "Chiedi ad LLM",
+			"name": "Chiedi ad LLM (ChatClient)",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\"question\": \"Scrivi dieci parole a caso\"}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "localhost:8080/client/ask",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"client",
+						"ask"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Chiedi ad LLM (ChatModel)",
 			"request": {
 				"method": "POST",
 				"header": [],
@@ -22,12 +50,13 @@
 					}
 				},
 				"url": {
-					"raw": "localhost:8080/ask",
+					"raw": "localhost:8080/model/ask",
 					"host": [
 						"localhost"
 					],
 					"port": "8080",
 					"path": [
+						"model",
 						"ask"
 					]
 				}
@@ -35,7 +64,7 @@
 			"response": []
 		},
 		{
-			"name": "LLM come dizionario",
+			"name": "LLM come dizionario (ChatClient)",
 			"request": {
 				"method": "POST",
 				"header": [],
@@ -49,12 +78,41 @@
 					}
 				},
 				"url": {
-					"raw": "localhost:8080/definition",
+					"raw": "localhost:8080/client/definition",
 					"host": [
 						"localhost"
 					],
 					"port": "8080",
 					"path": [
+						"client",
+						"definition"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "LLM come dizionario (ChatModel)",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\"lemma\": \"gatto\"}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "localhost:8080/model/definition",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"model",
 						"definition"
 					]
 				}

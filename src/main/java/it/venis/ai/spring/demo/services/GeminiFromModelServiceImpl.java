@@ -15,51 +15,50 @@ import it.venis.ai.spring.demo.model.DefinitionRequest;
 import it.venis.ai.spring.demo.model.Question;
 
 @Service
-public class GeminiServiceImpl implements GeminiService {
+public class GeminiFromModelServiceImpl implements GeminiFromModelService {
 
     private final ChatModel chatModel;
 
-    public GeminiServiceImpl(ChatModel chatModel) {
+    public GeminiFromModelServiceImpl(ChatModel chatModel) {
 
         this.chatModel = chatModel;
-        
+
     }
 
     @Override
-    public String getAnswer(String question) {
+    public String getAnswerFromModel(String question) {
 
         PromptTemplate promptTemplate = new PromptTemplate(question);
 
         Prompt prompt = promptTemplate.create();
 
-        ChatResponse response = chatModel.call(prompt);
+        ChatResponse response = this.chatModel.call(prompt);
 
         return response.getResult().getOutput().getText();
 
     }
 
     @Override
-    public Answer getAnswer(Question question) {
+    public Answer getAnswerFromModel(Question question) {
 
-        return new Answer(getAnswer(question.question()));
-    
+        return new Answer(getAnswerFromModel(question.question()));
+
     }
-
 
     @Value("classpath:templates/get-definition-prompt.st")
     private Resource definitionPrompt;
 
     @Override
-    public Answer getDefinition(DefinitionRequest definitionRequest) {
-        
-        PromptTemplate promptTemplate = new PromptTemplate(definitionPrompt);
-        
+    public Answer getDefinitionFromModel(DefinitionRequest definitionRequest) {
+
+        PromptTemplate promptTemplate = new PromptTemplate(this.definitionPrompt);
+
         Prompt prompt = promptTemplate.create(Map.of("lemma", definitionRequest.lemma()));
-        
-        ChatResponse response = chatModel.call(prompt);
+
+        ChatResponse response = this.chatModel.call(prompt);
 
         return new Answer(response.getResult().getOutput().getText());
-    
+
     }
 
 }

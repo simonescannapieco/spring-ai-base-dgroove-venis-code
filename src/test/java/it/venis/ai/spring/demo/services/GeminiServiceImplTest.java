@@ -8,15 +8,26 @@ import org.springframework.boot.test.context.SpringBootTest;
 public class GeminiServiceImplTest {
     
     @Autowired
-    GeminiServiceImpl geminiService;
-
+    GeminiFromModelServiceImpl geminiModelService;
+    
+    @Autowired
+    GeminiFromClientServiceImpl geminiClientService;
+    
     @Test
-    void testGetAnswer() {
+    void testGetAnswerFromModel() {
 
-        String answer = geminiService.getAnswer("Cosa è Spring AI?");
+        String answer = geminiModelService.getAnswerFromModel("Raccontami una barzelletta");
         
         System.out.println(answer);
         
     }
     
+    @Test
+    void testGetAnswerFromClient() {
+
+        String answer = geminiClientService.getAnswerFromClient("Spiegami cosa sei in una unica frase");
+        
+        System.out.println(answer);
+        
+    }
 }
