@@ -16,4 +16,4 @@
 	 - Dipendenze: **Spring Web** e **OpenAI API**
  3. Da terminale, eseguire `mvn spring-boot:run`
 
-Per ulteriori informazioni, si rimanda al [documento relativo ai passaggi pratici]{https://github.com/simonescannapieco/spring-ai-base-dgroove-venis-slides/blob/master/practice/3_spring_ai_initializr/out/3_spring_ai_initializr_handout.pdf}.
+Per ulteriori informazioni, si rimanda al [documento relativo ai passaggi pratici]{https://github.com/simonescannapieco/spring-ai-base-dgroove-venis-slides/blob/master/practice/3_spring_ai_initializr/out/}.
