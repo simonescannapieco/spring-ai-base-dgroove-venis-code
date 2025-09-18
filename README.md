@@ -1,17 +1,11 @@
 # Spring AI
 ## Generative Artificial Intelligence con Java - Corso base
 
+### Introduzione ai *prompt templates* Spring AI
 
-## Spring Initializr per inizializzazione progetto Spring AI
+ 1. Creazione di una *string template* e di modello di richiesta definizione
+ 2. Modifiche ad interfaccia ed implementazione del servizio Gemini
+ 3. Modifiche al controllore MVC per servizio Gemini
+ 4. *Test* delle funzionalità con [Postman]()/[Insomnia]()
 
- 1. Da *web browser*, accedere a [Spring Initializr](https://start.spring.io/)
- 2. Creare un progetto Spring Boot con:
-	 - Linguaggio Java 21
-	 - *Build tool* Maven
-	 - Spring Boot più recente **NON SNAPSHOT**
-	 - *Group*: it.venis.ai.spring
-	 - *Artifact*: demo
-	 - Descrizione a piacere
-	 - *Packaging*: **jar**
-	 - Dipendenze: **Spring Web** e **OpenAI**
- 3. Da terminale, eseguire `mvn spring-boot:run`
+Per ulteriori informazioni, si rimanda al [documento di esercitazione](https://github.com/simonescannapieco/spring-ai-base-dgroove-venis-slides/blob/master/practice/8_spring_ai_gemini_prompt_templates/out/8_spring_ai_gemini_prompt_templates_handout.pdf).
