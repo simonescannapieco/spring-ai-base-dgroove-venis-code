@@ -4,7 +4,7 @@
 ### Creazione servizio Gemini
 
 1. Creazione interfaccia ed implementazione del servizio Gemini
-2. Configurazione aggiuntiva application.yml
+2. Configurazione aggiuntiva `application.yml`
 3. Setup ambiente JUnit
 4. Esecuzione del *test* di connnettività a Gemini
 
