@@ -1,8 +1,7 @@
 # Spring AI
 ## Generative Artificial Intelligence con Java - Corso base
 
-
-## Differenze fra ChatModel e ChatClient in Spring AI
+### Differenze fra ChatModel e ChatClient in Spring AI
 
 1. Trasformazione *file* GeminiService.java in GeminiFromModelService.java
 2. Trasformazione *file* GeminiServiceImpl.java in GeminiFromModelServiceImpl.java
