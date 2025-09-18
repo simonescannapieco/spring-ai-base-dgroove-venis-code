@@ -1,8 +1,7 @@
 # Spring AI
 ## Generative Artificial Intelligence con Java - Corso base
 
-
-## Spring Initializr per inizializzazione progetto Spring AI
+### Spring Initializr per inizializzazione progetto Spring AI
 
  1. Da *web browser*, accedere a [Spring Initializr](https://start.spring.io/)
  2. Creare un progetto Spring Boot con:
