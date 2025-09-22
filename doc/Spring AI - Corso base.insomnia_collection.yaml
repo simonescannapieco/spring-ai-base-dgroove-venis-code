@@ -107,6 +107,31 @@ collection:
         send: true
         store: true
       rebuildPath: true
+  - url: http://localhost:8080/client/definition/custom
+    name: LLM come dizionario custom (ChatClient)
+    meta:
+      id: req_c3a9fafb7e1d4dfabffdbdeba7bf9d9a
+      created: 1758545629015
+      modified: 1758545665806
+      isPrivate: false
+      sortKey: -1754995722834.75
+    method: POST
+    body:
+      mimeType: application/json
+      text: '{"lemma": "gatto"}'
+    headers:
+      - name: Content-Type
+        value: application/json
+      - name: User-Agent
+        value: insomnia/11.0.2
+    settings:
+      renderRequestBody: true
+      encodeUrl: true
+      followRedirects: global
+      cookies:
+        send: true
+        store: true
+      rebuildPath: true
 cookieJar:
   name: Default Jar
   meta:
