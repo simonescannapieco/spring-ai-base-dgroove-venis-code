@@ -34,5 +34,12 @@ public class QuestionFromClientController {
         return this.geminiService.getDefinitionFromClient(definitionRequest);
 
     }
+    
+    @PostMapping("/client/definition/custom")
+    public Answer getCustomFormatDefinition(@RequestBody DefinitionRequest definitionRequest) {
+
+        return this.geminiService.getCustomFormatDefinitionFromClient(definitionRequest);
+
+    }
 
 }
