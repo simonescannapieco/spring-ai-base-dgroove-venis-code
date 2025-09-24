@@ -7,5 +7,5 @@ import com.fasterxml.jackson.annotation.JsonPropertyDescription;
 public record DefinitionResponse(
         @JsonPropertyDescription("Il lemma da definire") String lemma,
         @JsonPropertyDescription("La definizione del lemma") String description,
-        @JsonPropertyDescription("Esempi di utilizzo") List<DefinitionExamples> examples) {
+        @JsonPropertyDescription("Esempi di utilizzo") List<DefinitionExample> examples) {
 }
