@@ -36,9 +36,9 @@ collection:
     meta:
       id: req_5736ae443a02444bbdb7ddb5b59cc42f
       created: 1758016737467
-      modified: 1758182286823
+      modified: 1758701400643
       isPrivate: false
-      sortKey: -1758016737467
+      sortKey: -1756506230200.875
     method: POST
     body:
       mimeType: application/json
@@ -61,9 +61,9 @@ collection:
     meta:
       id: req_e46bd63a48394d9ab3c3859e22823edf
       created: 1758182255733
-      modified: 1758182260882
+      modified: 1758701390853
       isPrivate: false
-      sortKey: -1758016737517
+      sortKey: -1758016737667
     method: POST
     body:
       mimeType: application/json
@@ -87,9 +87,9 @@ collection:
     meta:
       id: req_85a955f67b8f4c8f928bb01720d3b015
       created: 1758182296443
-      modified: 1758182300073
+      modified: 1758701393033
       isPrivate: false
-      sortKey: -1751974708202.5
+      sortKey: -1758016737617
     method: POST
     body:
       mimeType: application/json
@@ -108,13 +108,38 @@ collection:
         store: true
       rebuildPath: true
   - url: http://localhost:8080/client/definition/custom
-    name: LLM come dizionario custom (ChatClient)
+    name: LLM come dizionario - Custom format (ChatClient)
     meta:
       id: req_c3a9fafb7e1d4dfabffdbdeba7bf9d9a
       created: 1758545629015
-      modified: 1758545665806
+      modified: 1758701423723
       isPrivate: false
       sortKey: -1754995722834.75
+    method: POST
+    body:
+      mimeType: application/json
+      text: '{"lemma": "gatto"}'
+    headers:
+      - name: Content-Type
+        value: application/json
+      - name: User-Agent
+        value: insomnia/11.0.2
+    settings:
+      renderRequestBody: true
+      encodeUrl: true
+      followRedirects: global
+      cookies:
+        send: true
+        store: true
+      rebuildPath: true
+  - url: http://localhost:8080/client/definition/json/user
+    name: LLM come dizionario - JSON user format (ChatClient)
+    meta:
+      id: req_fc77eeac933c4aaa9adcd8391918d5dc
+      created: 1758701450680
+      modified: 1758701455396
+      isPrivate: false
+      sortKey: -1750464200886.375
     method: POST
     body:
       mimeType: application/json
