@@ -157,6 +157,31 @@ collection:
         send: true
         store: true
       rebuildPath: true
+  - url: http://localhost:8080/client/definition/json/converter
+    name: LLM come dizionario - JSON output converter format (ChatClient)
+    meta:
+      id: req_e43d8041d84d4bc996fa3414f5eabdba
+      created: 1758704449308
+      modified: 1758704456042
+      isPrivate: false
+      sortKey: -1748198439912.1875
+    method: POST
+    body:
+      mimeType: application/json
+      text: '{"lemma": "gatto"}'
+    headers:
+      - name: Content-Type
+        value: application/json
+      - name: User-Agent
+        value: insomnia/11.0.2
+    settings:
+      renderRequestBody: true
+      encodeUrl: true
+      followRedirects: global
+      cookies:
+        send: true
+        store: true
+      rebuildPath: true
 cookieJar:
   name: Default Jar
   meta:
