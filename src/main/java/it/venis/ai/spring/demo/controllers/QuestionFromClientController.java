@@ -4,6 +4,7 @@ import org.springframework.web.bind.annotation.RestController;
 
 import it.venis.ai.spring.demo.model.Answer;
 import it.venis.ai.spring.demo.model.DefinitionRequest;
+import it.venis.ai.spring.demo.model.DefinitionResponse;
 import it.venis.ai.spring.demo.model.Question;
 import it.venis.ai.spring.demo.services.GeminiFromClientService;
 
@@ -46,6 +47,13 @@ public class QuestionFromClientController {
     public Answer getJSONUserFormatDefinition(@RequestBody DefinitionRequest definitionRequest) {
 
         return this.geminiService.getJSONUserFormatDefinitionFromClient(definitionRequest);
+
+    }
+
+    @PostMapping("/client/definition/json/converter")
+    public DefinitionResponse getJSONOutputConverterFormatDefinition(@RequestBody DefinitionRequest definitionRequest) {
+
+        return this.geminiService.getJSONOutputConverterFormatDefinitionFromClient(definitionRequest);
 
     }
 

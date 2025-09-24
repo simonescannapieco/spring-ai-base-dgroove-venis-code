@@ -1,8 +1,10 @@
 package it.venis.ai.spring.demo.services;
 
 import java.util.Map;
+import java.util.Objects;
 
 import org.springframework.ai.chat.client.ChatClient;
+import org.springframework.ai.converter.BeanOutputConverter;
 import org.springframework.ai.template.st.StTemplateRenderer;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.beans.factory.annotation.Value;
@@ -15,6 +17,7 @@ import com.fasterxml.jackson.databind.ObjectMapper;
 
 import it.venis.ai.spring.demo.model.Answer;
 import it.venis.ai.spring.demo.model.DefinitionRequest;
+import it.venis.ai.spring.demo.model.DefinitionResponse;
 import it.venis.ai.spring.demo.model.Question;
 
 @Service
@@ -110,6 +113,32 @@ public class GeminiFromClientServiceImpl implements GeminiFromClientService {
         }
 
         return new Answer(responseString);
+
+    }
+
+
+    @Value("classpath:templates/get-json-output-converter-format-definition-prompt.st")
+    private Resource JSONOutputCOnverterFormatDefinitionPrompt;
+
+    @Override
+    public DefinitionResponse getJSONOutputConverterFormatDefinitionFromClient(DefinitionRequest definitionRequest) {
+        
+        BeanOutputConverter<DefinitionResponse> converter = new BeanOutputConverter<>(DefinitionResponse.class);
+
+        String format = converter.getFormat();
+
+        System.out.println(format);
+        
+        String chatResponse = this.chatClient.prompt()
+                .user(u -> u.text(this.JSONOutputCOnverterFormatDefinitionPrompt)
+                        .params(Map.of("lemma", definitionRequest.lemma(), "formato", format)))
+                .templateRenderer(StTemplateRenderer.builder().startDelimiterToken('{')
+                        .endDelimiterToken('}')
+                        .build())
+                .call()
+                .content();
+
+        return converter.convert(Objects.requireNonNull(chatResponse));
 
     }
 

@@ -2,6 +2,7 @@ package it.venis.ai.spring.demo.services;
 
 import it.venis.ai.spring.demo.model.Answer;
 import it.venis.ai.spring.demo.model.DefinitionRequest;
+import it.venis.ai.spring.demo.model.DefinitionResponse;
 import it.venis.ai.spring.demo.model.Question;
 
 public interface GeminiFromClientService {
@@ -15,5 +16,7 @@ public interface GeminiFromClientService {
     Answer getCustomFormatDefinitionFromClient(DefinitionRequest definitionRequest);
 
     Answer getJSONUserFormatDefinitionFromClient(DefinitionRequest definitionRequest);
+
+    DefinitionResponse getJSONOutputConverterFormatDefinitionFromClient(DefinitionRequest definitionRequest);
 
 }
