@@ -42,10 +42,11 @@ public class QuestionFromClientController {
 
     }
 
-    @PostMapping("/client/definition/json")
-    public Answer getJSONFormatDefinition(@RequestBody DefinitionRequest definitionRequest) {
+    @PostMapping("/client/definition/json/user")
+    public Answer getJSONUserFormatDefinition(@RequestBody DefinitionRequest definitionRequest) {
 
-        return this.geminiService.getJSONFormatDefinitionFromClient(definitionRequest);
+        return this.geminiService.getJSONUserFormatDefinitionFromClient(definitionRequest);
 
     }
+
 }

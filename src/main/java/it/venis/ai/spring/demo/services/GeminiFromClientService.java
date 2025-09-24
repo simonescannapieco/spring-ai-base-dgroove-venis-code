@@ -14,6 +14,6 @@ public interface GeminiFromClientService {
 
     Answer getCustomFormatDefinitionFromClient(DefinitionRequest definitionRequest);
 
-    Answer getJSONFormatDefinitionFromClient(DefinitionRequest definitionRequest);
+    Answer getJSONUserFormatDefinitionFromClient(DefinitionRequest definitionRequest);
 
 }

@@ -79,17 +79,17 @@ public class GeminiFromClientServiceImpl implements GeminiFromClientService {
 
     }
 
-    @Value("classpath:templates/get-json-format-definition-prompt.st")
-    private Resource JSONFormatDefinitionPrompt;
+    @Value("classpath:templates/get-json-user-format-definition-prompt.st")
+    private Resource JSONUserFormatDefinitionPrompt;
 
     @Autowired
     ObjectMapper objectMapper;
 
     @Override
-    public Answer getJSONFormatDefinitionFromClient(DefinitionRequest definitionRequest) {
+    public Answer getJSONUserFormatDefinitionFromClient(DefinitionRequest definitionRequest) {
 
         String chatResponse = this.chatClient.prompt()
-                .user(u -> u.text(this.JSONFormatDefinitionPrompt)
+                .user(u -> u.text(this.JSONUserFormatDefinitionPrompt)
                         .params(Map.of("lemma", definitionRequest.lemma())))
                 .templateRenderer(StTemplateRenderer.builder().startDelimiterToken('<')
                         .endDelimiterToken('>')
