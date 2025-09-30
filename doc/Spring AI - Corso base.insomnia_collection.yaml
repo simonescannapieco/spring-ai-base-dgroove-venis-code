@@ -158,17 +158,121 @@ collection:
         store: true
       rebuildPath: true
   - url: http://localhost:8080/client/definition/json/converter
-    name: LLM come dizionario - JSON output converter format (ChatClient)
+    name: LLM come dizionario - JSON output converter format (ChatClient) - Default
     meta:
       id: req_e43d8041d84d4bc996fa3414f5eabdba
       created: 1758704449308
-      modified: 1759219884196
+      modified: 1759222644508
       isPrivate: false
       sortKey: -1748198439912.1875
     method: POST
     body:
       mimeType: application/json
+      text: '{"lemma": "casa"}'
+    headers:
+      - name: Content-Type
+        value: application/json
+      - name: User-Agent
+        value: insomnia/11.0.2
+    settings:
+      renderRequestBody: true
+      encodeUrl: true
+      followRedirects: global
+      cookies:
+        send: true
+        store: true
+      rebuildPath: true
+  - url: http://localhost:8080/client/definition/json/converter
+    name: LLM come dizionario - JSON output converter format (ChatClient) -
+      Embodiment 1
+    meta:
+      id: req_fe572c002deb420680fcd9d0ff0da23a
+      created: 1759222658039
+      modified: 1759222675738
+      isPrivate: false
+      sortKey: -1747065559425.0938
+    method: POST
+    body:
+      mimeType: application/json
       text: '{"lemma": "amore", "agent": "Bob Marley"}'
+    headers:
+      - name: Content-Type
+        value: application/json
+      - name: User-Agent
+        value: insomnia/11.0.2
+    settings:
+      renderRequestBody: true
+      encodeUrl: true
+      followRedirects: global
+      cookies:
+        send: true
+        store: true
+      rebuildPath: true
+  - url: http://localhost:8080/client/definition/json/converter
+    name: LLM come dizionario - JSON output converter format (ChatClient) -
+      Embodiment 2
+    meta:
+      id: req_d6ed9f596f0c4d1a8f90584e34d8f326
+      created: 1759222683698
+      modified: 1759222693740
+      isPrivate: false
+      sortKey: -1746499119181.5469
+    method: POST
+    body:
+      mimeType: application/json
+      text: '{"lemma": "guerra", "agent": "Adolf Hitler"}'
+    headers:
+      - name: Content-Type
+        value: application/json
+      - name: User-Agent
+        value: insomnia/11.0.2
+    settings:
+      renderRequestBody: true
+      encodeUrl: true
+      followRedirects: global
+      cookies:
+        send: true
+        store: true
+      rebuildPath: true
+  - url: http://localhost:8080/client/definition/json/converter
+    name: LLM come dizionario - JSON output converter format (ChatClient) -
+      Embodiment + Mod. Arithmetic 1
+    meta:
+      id: req_b9049cc1fd064e76a23c08fc259a597f
+      created: 1759222733101
+      modified: 1759222754192
+      isPrivate: false
+      sortKey: -1746215899059.7734
+    method: POST
+    body:
+      mimeType: application/json
+      text: '{"lemma": "1+2", "agent": "un bambino delle elementari"}'
+    headers:
+      - name: Content-Type
+        value: application/json
+      - name: User-Agent
+        value: insomnia/11.0.2
+    settings:
+      renderRequestBody: true
+      encodeUrl: true
+      followRedirects: global
+      cookies:
+        send: true
+        store: true
+      rebuildPath: true
+  - url: http://localhost:8080/client/definition/json/converter
+    name: LLM come dizionario - JSON output converter format (ChatClient) - Idiom
+      understanding
+    meta:
+      id: req_49fd6ef049ef42258bca27b7179bf474
+      created: 1759222777227
+      modified: 1759222872374
+      isPrivate: false
+      sortKey: -1746074288998.8867
+    method: POST
+    body:
+      mimeType: application/json
+      text: '{"lemma": "non può piovere per sempre"}'
     headers:
       - name: Content-Type
         value: application/json

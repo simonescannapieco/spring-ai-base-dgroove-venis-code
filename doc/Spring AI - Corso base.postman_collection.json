@@ -179,13 +179,133 @@
 			"response": []
 		},
 		{
-			"name": "LLM come dizionario - JSON output converter format (ChatClient)",
+			"name": "LLM come dizionario - JSON output converter format (ChatClient) - Default",
 			"request": {
 				"method": "POST",
 				"header": [],
 				"body": {
 					"mode": "raw",
 					"raw": "{\"lemma\": \"amore\", \"agent\": \"Bob Marley\"}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "localhost:8080/client/definition/json/converter",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"client",
+						"definition",
+						"json",
+						"converter"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "LLM come dizionario - JSON output converter format (ChatClient) - Embodiment 1",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\"lemma\": \"amore\", \"agent\": \"Bob Marley\"}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "localhost:8080/client/definition/json/converter",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"client",
+						"definition",
+						"json",
+						"converter"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "LLM come dizionario - JSON output converter format (ChatClient) - Embodiment 2",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\"lemma\": \"guerra\", \"agent\": \"Adolf Hitler\"}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "localhost:8080/client/definition/json/converter",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"client",
+						"definition",
+						"json",
+						"converter"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "LLM come dizionario - JSON output converter format (ChatClient) - Embodiment + Mod. Arithmetic 1",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\"lemma\": \"1+2\", \"agent\": \"un bambino delle elementari\"}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "localhost:8080/client/definition/json/converter",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"client",
+						"definition",
+						"json",
+						"converter"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "LLM come dizionario - JSON output converter format (ChatClient) - Idiom understanding",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\"lemma\": \"non può piovere per sempre\"}",
 					"options": {
 						"raw": {
 							"language": "json"
