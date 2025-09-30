@@ -1,1 +1,1 @@
-Dammi una definizione del termine {lemma}, come riporterebbe un dizionario. {formato}
+Dammi una definizione del termine {lemma}, come riporterebbe {agente}. {formato}

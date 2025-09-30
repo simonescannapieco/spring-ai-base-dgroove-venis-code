@@ -131,7 +131,7 @@ public class GeminiFromClientServiceImpl implements GeminiFromClientService {
         
         String chatResponse = this.chatClient.prompt()
                 .user(u -> u.text(this.JSONOutputCOnverterFormatDefinitionPrompt)
-                        .params(Map.of("lemma", definitionRequest.lemma(), "formato", format)))
+                        .params(Map.of("lemma", definitionRequest.lemma(), "agente", definitionRequest.agent(), "formato", format)))
                 .templateRenderer(StTemplateRenderer.builder().startDelimiterToken('{')
                         .endDelimiterToken('}')
                         .build())
