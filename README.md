@@ -1,7 +1,7 @@
 # Spring AI
 ## Generative Artificial Intelligence con Java - Corso base
 
-### *JSON format* di *prompt template* attraverso *output formatter* in Spring AI
+### Capacità emergenti in LLM: *embodiment* e *self-introspection*
 
 1. Modifica *string template* per richiesta definizione da dizionario in formato JSON convertibile automaticamente
 2. Modifica modello di richiesta a LLM (popolamento parametri di *default*)
