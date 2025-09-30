@@ -162,13 +162,13 @@ collection:
     meta:
       id: req_e43d8041d84d4bc996fa3414f5eabdba
       created: 1758704449308
-      modified: 1758704456042
+      modified: 1759219884196
       isPrivate: false
       sortKey: -1748198439912.1875
     method: POST
     body:
       mimeType: application/json
-      text: '{"lemma": "gatto"}'
+      text: '{"lemma": "amore", "agent": "Bob Marley"}'
     headers:
       - name: Content-Type
         value: application/json

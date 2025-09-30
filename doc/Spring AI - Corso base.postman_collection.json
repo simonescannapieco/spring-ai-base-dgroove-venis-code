@@ -185,7 +185,7 @@
 				"header": [],
 				"body": {
 					"mode": "raw",
-					"raw": "{\"lemma\": \"gatto\"}",
+					"raw": "{\"lemma\": \"amore\", \"agent\": \"Bob Marley\"}",
 					"options": {
 						"raw": {
 							"language": "json"
