@@ -1,7 +1,7 @@
 # Spring AI
 ## Generative Artificial Intelligence con Java - Corso base
 
-### Capacità emergenti in LLM: *embodiment* e *self-introspection*
+### Capacità emergenti in LLM: *embodiment*, *mathematical*, *idiom understanding*
 
 1. Modifica *string template* per richiesta definizione da dizionario in formato JSON convertibile automaticamente
 2. Modifica modello di richiesta a LLM (popolamento parametri di *default*)
