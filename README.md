@@ -1,7 +1,7 @@
 # Spring AI
 ## Generative Artificial Intelligence con Java - Corso base
 
-### LLM: paramteri di controlli dell'*output*
+### LLM: parametri di controllo dell'*output*
 
 1. Modifica *file* `Question.java` per integrazione UUID
 2. Modifica *file* `application.yml` con tutti i possibili parametri
