@@ -327,6 +327,36 @@
 				}
 			},
 			"response": []
+		},
+		{
+			"name": "LLM come sentiment analyzer (ChatClient)",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\"lemma\": \"non può piovere per sempre\"}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "localhost:8080/client/definition/json/converter",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"client",
+						"definition",
+						"json",
+						"converter"
+					]
+				}
+			},
+			"response": []
 		}
 	]
 }
