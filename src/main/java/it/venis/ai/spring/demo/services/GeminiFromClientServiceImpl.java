@@ -4,6 +4,7 @@ import java.util.Map;
 import java.util.Objects;
 
 import org.springframework.ai.chat.client.ChatClient;
+import org.springframework.ai.chat.prompt.ChatOptions;
 import org.springframework.ai.converter.BeanOutputConverter;
 import org.springframework.ai.template.st.StTemplateRenderer;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -15,7 +16,9 @@ import com.fasterxml.jackson.core.JsonProcessingException;
 import com.fasterxml.jackson.databind.JsonNode;
 import com.fasterxml.jackson.databind.ObjectMapper;
 
+import it.venis.ai.spring.demo.data.Sentiment;
 import it.venis.ai.spring.demo.model.Answer;
+import it.venis.ai.spring.demo.model.ArtifactRequest;
 import it.venis.ai.spring.demo.model.DefinitionRequest;
 import it.venis.ai.spring.demo.model.DefinitionResponse;
 import it.venis.ai.spring.demo.model.Question;
@@ -139,6 +142,33 @@ public class GeminiFromClientServiceImpl implements GeminiFromClientService {
                 .content();
 
         return converter.convert(Objects.requireNonNull(chatResponse));
+
+    }
+
+    @Value("classpath:templates/get-artifact-sentiment-prompt.st")
+    private Resource artifactSentimentPrompt;
+
+    @Override
+    public Answer getSentimentForArtifact(ArtifactRequest artifactRequest) {
+        Sentiment chatResponse = this.chatClient.prompt()
+                .options(ChatOptions.builder()
+                //.model("gemini-2.0-flash")
+                .temperature(0.1)
+                .topP(1.0)
+                //.topK(30)
+                .maxTokens(10)
+                //.frequencyPenalty(0.1)
+                //.presencePenalty(0.1)
+                .build())
+                .user(u -> u.text(this.artifactSentimentPrompt)
+                        .params(Map.of("recensione", artifactRequest.review(), "artefatto", artifactRequest.type())))
+                .templateRenderer(StTemplateRenderer.builder().startDelimiterToken('{')
+                        .endDelimiterToken('}')
+                        .build())
+                .call()
+                .entity(Sentiment.class);
+
+        return new Answer(chatResponse.getSentiment());
 
     }
 

@@ -3,6 +3,7 @@ package it.venis.ai.spring.demo.controllers;
 import org.springframework.web.bind.annotation.RestController;
 
 import it.venis.ai.spring.demo.model.Answer;
+import it.venis.ai.spring.demo.model.ArtifactRequest;
 import it.venis.ai.spring.demo.model.DefinitionRequest;
 import it.venis.ai.spring.demo.model.DefinitionResponse;
 import it.venis.ai.spring.demo.model.Question;
@@ -35,7 +36,7 @@ public class QuestionFromClientController {
         return this.geminiService.getDefinitionFromClient(definitionRequest);
 
     }
-    
+
     @PostMapping("/client/definition/custom")
     public Answer getCustomFormatDefinition(@RequestBody DefinitionRequest definitionRequest) {
 
@@ -54,6 +55,13 @@ public class QuestionFromClientController {
     public DefinitionResponse getJSONOutputConverterFormatDefinition(@RequestBody DefinitionRequest definitionRequest) {
 
         return this.geminiService.getJSONOutputConverterFormatDefinitionFromClient(definitionRequest);
+
+    }
+
+    @PostMapping("/client/sentiment")
+    public Answer getSentiment(@RequestBody ArtifactRequest artifactRequest) {
+
+        return this.geminiService.getSentimentForArtifact(artifactRequest);
 
     }
 
