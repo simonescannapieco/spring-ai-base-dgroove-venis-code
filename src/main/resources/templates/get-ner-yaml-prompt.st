@@ -1,5 +1,5 @@
 ESEMPIO:
-'''Titolo''' La partigiana Rosani e il benefattore Forti, il rabbino: «Preghiamo per la pace globale, finisca il dolore di tutti»
+'''Titolo''' La partigiana Rosani e il benefattore Forti, il rabbino: <<Preghiamo per la pace globale, finisca il dolore di tutti>>
 '''Sottotitolo''' Le parole del rabbino Corinaldi al cimitero ebraico in occasione della commemorazione di Achille Forti e Rita Rosani e dell'avvio del Yom Kippur, il giorno dell'espiazione.
 '''Corpo''' <<Stiamo vivendo momenti importanti, che speriamo possano cambiare la situazione e portare a un nuovo anno migliore di quelli vissuti negli ultimi due. Oggi preghiamo per il popolo ebraico ma anche per tutto il mondo, a cui vogliamo bene. Cerchiamo di vivere in serenità, in pace>>.
 Le parole sono del rabbino di Verona, Tomer Corinaldi, pronunciate al cimitero ebraico, in occasione della commemorazione del benefattore del Comune di Verona, Achille Forti, e della Medaglia d'oro Rita Rosani.
@@ -27,7 +27,7 @@ ner:
     - Yom Kippur
     data:
     organizzazione:
-    orari:
+    orario:
     valuta:
     percentuale:
     quantità:
@@ -116,7 +116,7 @@ ner:
     - VI Maggio (via)
     organizzazione:
     - Ulss 9 Scaligera
-    orari:
+    orario:
     - 20:00
     valuta:
     percentuale:
