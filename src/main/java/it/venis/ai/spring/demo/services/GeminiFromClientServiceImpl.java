@@ -161,7 +161,7 @@ public class GeminiFromClientServiceImpl implements GeminiFromClientService {
                 //.presencePenalty(0.1)
                 .build())
                 .user(u -> u.text(this.artifactSentimentPrompt)
-                        .params(Map.of("recensione", artifactRequest.review(), "artefatto", artifactRequest.type())))
+                        .params(Map.of("recensione", artifactRequest.artifact().body(), "artefatto", artifactRequest.artifact().type())))
                 .templateRenderer(StTemplateRenderer.builder().startDelimiterToken('{')
                         .endDelimiterToken('}')
                         .build())
