@@ -65,4 +65,11 @@ public class QuestionFromClientController {
 
     }
 
+    @PostMapping("/client/ner/yaml")
+    public Answer getNERinYAML(@RequestBody ArtifactRequest artifactRequest) {
+
+        return this.geminiService.getNERinYAMLForArtifact(artifactRequest);
+
+    }
+
 }
