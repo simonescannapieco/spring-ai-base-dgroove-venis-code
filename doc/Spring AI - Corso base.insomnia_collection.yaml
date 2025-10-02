@@ -291,17 +291,17 @@ collection:
     meta:
       id: req_753a413cfe54442fba2f469602d10fdf
       created: 1759327158326
-      modified: 1759327393604
+      modified: 1759392193871
       isPrivate: false
       sortKey: -1746003483968.4434
     method: POST
     body:
       mimeType: application/json
-      text: '{"type": "LIBRO", "review": "a quattro ore dalla fine non riesco ancora a
-        metabolizzarlo: mi brucia dentro, come una fiamma che non vuole
-        spegnersi. Per questo devo tornare a parlarne, perché Il cerchio dei
-        giorni non è solo l’ultimo romanzo di Ken Follett, è uno di quei rari
-        libri che si scolpiscono dentro e ti costringono a fermarti, a
+      text: '{"artifact": {"type": "LIBRO", "body": "a quattro ore dalla fine non
+        riesco ancora a metabolizzarlo: mi brucia dentro, come una fiamma che
+        non vuole spegnersi. Per questo devo tornare a parlarne, perché Il
+        cerchio dei giorni non è solo l’ultimo romanzo di Ken Follett, è uno di
+        quei rari libri che si scolpiscono dentro e ti costringono a fermarti, a
         respirare, a sentirne il peso e la bellezza. E sì, senza esitazione, lo
         inserisco nella mia top 5 dei libri più belli letti negli ultimi
         vent’anni. Ci sono personaggi che nascono sulla pagina e restano
@@ -330,7 +330,7 @@ collection:
         In questo romanzo Ken Follett ci consegna non solo un affresco di 4500
         anni fa, ma una figura destinata a rimanere: Joia, la sacerdotessa della
         luce, la donna che fece del futuro un atto di fede e del sogno un
-        monumento eterno."}'
+        monumento eterno."}}'
     headers:
       - name: Content-Type
         value: application/json
