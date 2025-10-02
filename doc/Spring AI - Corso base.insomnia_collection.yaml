@@ -349,7 +349,7 @@ collection:
     meta:
       id: req_2909bba7f8834566b7418200ef7f6d63
       created: 1759399599843
-      modified: 1759399628883
+      modified: 1759402612055
       isPrivate: false
       sortKey: -1745968081453.2217
     method: POST
@@ -368,7 +368,7 @@ collection:
         humanitarian crisis amid Israel’s offensive. In Gaza: Israel is pressing
         on with efforts to capture Gaza City. The Red Cross has suspended
         operations and the Israeli defense minister said Palestinians had a
-        “last opportunity” to move south."}}'
+        <<last opportunity>> to move south."}}'
     headers:
       - name: Content-Type
         value: application/json
