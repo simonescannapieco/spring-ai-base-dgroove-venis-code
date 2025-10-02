@@ -3,7 +3,7 @@
 
 ### *Few-shot prompting* per NER *extraction*
 
-1. Creazione *prompt template* con esempi di estrazione NER da due articoli di giornale
+1. Creazione *string template* con esempi di estrazione NER da due articoli di giornale
 2. Modifiche ad interfaccia ed implementazione del servizio Gemini
 3. Modifica del controllore MVC per servizio Gemini
 4. *Test* delle funzionalità con [Postman](https://github.com/simonescannapieco/spring-ai-base-dgroove-venis-code/blob/14-spring-ai-gemini-few-shot-prompting/doc/Spring%20AI%20-%20Corso%20base.postman_collection.json)/[Insomnia](https://github.com/simonescannapieco/spring-ai-base-dgroove-venis-code/blob/14-spring-ai-gemini-few-shot-prompting/doc/Spring%20AI%20-%20Corso%20base.insomnia_collection.yaml)
