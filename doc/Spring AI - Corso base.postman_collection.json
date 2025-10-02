@@ -355,6 +355,35 @@
 				}
 			},
 			"response": []
+		},
+		{
+			"name": "LLM come NER - YAML format (ChatClient)",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\"artifact\": {\"type\": \"ARTICOLO\", \"title\": \"Israel intercepts flotilla but some vessels near Gaza coast\", \"body\": \"Israel’s navy boarded vessels aiming to break the country’s blockade of Gaza, detaining dozens of people including Swedish activist Greta Thunberg. But the Global Sumud Flotilla says some ships are still heading to the territory. Flotilla organizers labeled Israel’s interception of the ships <<an illegal attack>> on humanitarians, while Israel said the activists were <<not interested in aid, but in provocation.>> The flotilla set sail with more than 500 participants from dozens of countries aiming to deliver food, water and medicine to civilians in Gaza, which is facing a humanitarian crisis amid Israel’s offensive. In Gaza: Israel is pressing on with efforts to capture Gaza City. The Red Cross has suspended operations and the Israeli defense minister said Palestinians had a “last opportunity” to move south.\"}}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "localhost:8080/client/ner/yaml",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"client",
+						"ner",
+						"yaml"
+					]
+				}
+			},
+			"response": []
 		}
 	]
 }

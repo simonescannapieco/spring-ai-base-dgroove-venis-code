@@ -344,6 +344,44 @@ collection:
         send: true
         store: true
       rebuildPath: true
+  - url: http://localhost:8080/client/ner/yaml
+    name: LLM come NER - YAML format (ChatClient)
+    meta:
+      id: req_2909bba7f8834566b7418200ef7f6d63
+      created: 1759399599843
+      modified: 1759399628883
+      isPrivate: false
+      sortKey: -1745968081453.2217
+    method: POST
+    body:
+      mimeType: application/json
+      text: '{"artifact": {"type": "ARTICOLO", "title": "Israel intercepts flotilla
+        but some vessels near Gaza coast", "body": "Israel’s navy boarded
+        vessels aiming to break the country’s blockade of Gaza, detaining dozens
+        of people including Swedish activist Greta Thunberg. But the Global
+        Sumud Flotilla says some ships are still heading to the territory.
+        Flotilla organizers labeled Israel’s interception of the ships <<an
+        illegal attack>> on humanitarians, while Israel said the activists were
+        <<not interested in aid, but in provocation.>> The flotilla set sail
+        with more than 500 participants from dozens of countries aiming to
+        deliver food, water and medicine to civilians in Gaza, which is facing a
+        humanitarian crisis amid Israel’s offensive. In Gaza: Israel is pressing
+        on with efforts to capture Gaza City. The Red Cross has suspended
+        operations and the Israeli defense minister said Palestinians had a
+        “last opportunity” to move south."}}'
+    headers:
+      - name: Content-Type
+        value: application/json
+      - name: User-Agent
+        value: insomnia/11.0.2
+    settings:
+      renderRequestBody: true
+      encodeUrl: true
+      followRedirects: global
+      cookies:
+        send: true
+        store: true
+      rebuildPath: true
 cookieJar:
   name: Default Jar
   meta:
