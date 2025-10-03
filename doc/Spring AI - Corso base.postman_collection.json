@@ -384,6 +384,34 @@
 				}
 			},
 			"response": []
+		},
+		{
+			"name": "LLM come advisor (ChatClient)",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\"artifact\": {\"type\": \"LIBRO\", \"body\": \"Mi sono buttata su questo romance classico, subito dopo una lettura impegnativa, per rilassare le meningi e devo dire che è stato un vero e proprio toccasansa. Mi sono divertita tantissimo e, in un paio di occasioni, ho addirittura riso, (il che per me, è un evento più unico che raro). Ciò che mi ha colpito fin da subito è il ritmo estremamente incalzante della narrazione, che mette in scena due filtri psicologici accurati e vivaci. Summer e Blake sono due scrittori, con una spiccata creatività che si mostra nelle battute di dialogo in cui abbondano similitudini e metafore legate al cinema e alla letteratura. Blake, in particolare, è l’esibizionista che si comporta sempre come fosse sotto i riflettori, infatti, si rivolge direttamente al lettore, facendo battute, dando spiegazioni, flirtando, tanto che non si può resistergli e ne siamo conquistati fin dalla prima pagina. Lo sfondamento della quarta parete è qualcosa che di solito ritengo molto discutibile e mal sopporto, ma in questo caso, l’ho trovato coerente con il tipo di storia e i personaggi, che fanno parte dello show business e sanno perfettamente che il loro mestiere è quello di intrattenere e lo fanno anche attraverso la pagina e per questo motivo noi li percepiamo veri e tridimensionali. Infatti, la storia si fruisce come se fosse una commedia romantica che stiamo vedendo al cinema o a teatro. I lettori non vivono un’esperienza immersiva in senso stretto, ma comunque coinvolgente, perché si sentono parte attiva nel gioco di ruolo. Summer e Blake rappresentano l’eterno divario tra uomini e donne. L’intero romanzo è una bonaria guerra tra il genere femminile e quello maschile, che per certi aspetti non si incontreranno mai, ma che possono imparare a convivere e rispettarsi, levigando reciprocamente qualche spigolosità e comprendendo come le doti di ognuno possano integrare le mancanze dell’altro. Complementarità, questo il segreto di una buona unione. Se lui è uno scrittore ricco e famoso, a cui però manca la scintilla per brillare davvero, quella sostanza impalpabile capace di sbloccare le sue emozioni e la sua scrittura, e di fargli mettere radici, Summer non ha ancora raggiunto l’indipendenza economica, è ancora immatura sia da un punto di vista lavorativo che affettivo. Ha un disperato bisogno di approvazione e ciò la spinge tra le braccia di un uomo molto più grande di lei, che, come suo padre, non sa apprezzarne l’acume e le competenze. Se per loro sono previsti archi di trasformazione, i personaggi secondari, invece, sono caricature: Cheyenne, la ragazza iniziale di Blake, incarna l’oca giuliva, l’avvenenza e la superficialità; Dwight è il più eccentrico, l’amico pazzo, mentre Emma Rea ricorda Samantha Jones di Sex and the City. L'atmosfera in cui ci troviamo coinvolti, infatti, è quella chick lit metropolitana, alla moda, ma presto scopriamo che sotto i lustrini c’è molto di più. È qui che interviene il tema della discriminazione delle donne sul posto di lavoro, un argomento importante di cui si parla sempre troppo poco. Ho apprezzato particolarmente trovarne qui una trattazione ironica, che mette ben in evidenza come le donne, con tutte le loro competenze, vengano spesso relegate a ruoli marginali, o peggio, raggirate da certi uomini troppo poveri di idee brillanti, che fanno carriera sulle loro spalle. Tuttavia, nella fase finale, la trattazione del tema perde di incisività a causa di un deus ex machina, che interviene a risolvere i problemi di Summer, invece di lasciare che sia lei stessa a prendere in mano la situazione e a portare a compimento il suo arco di trasformazione. L’arco di trasformazione di Summer viene distorto proprio sul più bello, così come anche il messaggio che ne deriva: per quanto brave siano le donne, il sistema è condotto dagli uomini e l’unico modo per emergere è attraverso conoscenze, favori ecc. Non molto edificante, se si pensa che questo è tuttora il pensiero predominante quando si vede una donna in carriera. Il romanzo segue la struttura classica del romance slow burn e impiega molti tropi usuali: enemies to lovers, un solo letto disponibile, la scommessa, tutti ben intrecciati a creare una trama avvincente, sostenuta soprattutto dal ritmo frizzante e dalla tensione costruita progressivamente tra i protagonisti. Sul tropo della scommessa, vorrei soffermami un attimo, perché l’ho percepito più che altro come un cliché e mi ha un po’ infastidito, perché ci potevano essere soluzioni più originali. Così invece, la trama è diventata scontata già al primo atto. Però, il ritmo è così spumeggiante, le battute di dialogo così divertenti e le scene così dinamiche e comiche che le imperfezioni passano in secondo piano e la lettura scorre veloce, lasciando l’animo più leggero. Quindi non posso fare altro che promuovere questo romanzo e consigliarlo alle aspiranti scrittrici di romance, soprattutto per lo studio del filtro psicologico e dello stile.\"}}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "localhost:8080/client/advice",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"client",
+						"advice"
+					]
+				}
+			},
+			"response": []
 		}
 	]
 }
