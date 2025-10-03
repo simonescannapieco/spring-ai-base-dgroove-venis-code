@@ -148,15 +148,12 @@ public class GeminiFromClientServiceImpl implements GeminiFromClientService {
     @Value("classpath:templates/get-artifact-sentiment-prompt.st")
     private Resource artifactSentimentPrompt;
 
-    @Value("classpath:templates/get-artifact-sentiment-prompt.st")
-    private Resource artifactSentimentPrompt;
-
     @Override
     public Answer getSentimentForArtifact(ArtifactRequest artifactRequest) {
         
         List<String> stopSequences = Stream.of(" ", "\n").collect(Collectors.toList());
 
-        String chatResponse = this.chatClient.prompt()
+        Sentiment chatResponse = this.chatClient.prompt()
                 .options(ChatOptions.builder()
                 .model("gemini-2.0-flash")
                 .temperature(0.1)
@@ -173,10 +170,9 @@ public class GeminiFromClientServiceImpl implements GeminiFromClientService {
                         .endDelimiterToken('}')
                         .build())
                 .call()
-                .content();
-                //.entity(Sentiment.class);
+                .entity(Sentiment.class);
 
-        return new Answer(chatResponse);
+        return new Answer(chatResponse.getSentiment());
 
     }
 
