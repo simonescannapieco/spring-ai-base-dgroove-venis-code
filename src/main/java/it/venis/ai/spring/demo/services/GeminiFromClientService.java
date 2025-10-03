@@ -1,6 +1,7 @@
 package it.venis.ai.spring.demo.services;
 
 import it.venis.ai.spring.demo.model.Answer;
+import it.venis.ai.spring.demo.model.Artifact;
 import it.venis.ai.spring.demo.model.ArtifactRequest;
 import it.venis.ai.spring.demo.model.DefinitionRequest;
 import it.venis.ai.spring.demo.model.DefinitionResponse;
@@ -25,5 +26,7 @@ public interface GeminiFromClientService {
     Answer getNERinYAMLForArtifact(ArtifactRequest artifactRequest);
 
     Answer getSuggestionForArtifact(ArtifactRequest artifactRequest);
+
+    Artifact getGeneratedArtifact(ArtifactRequest artifactRequest); 
 
 }

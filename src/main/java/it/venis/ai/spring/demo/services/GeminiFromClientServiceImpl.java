@@ -21,6 +21,7 @@ import com.fasterxml.jackson.databind.ObjectMapper;
 
 import it.venis.ai.spring.demo.data.Sentiment;
 import it.venis.ai.spring.demo.model.Answer;
+import it.venis.ai.spring.demo.model.Artifact;
 import it.venis.ai.spring.demo.model.ArtifactRequest;
 import it.venis.ai.spring.demo.model.DefinitionRequest;
 import it.venis.ai.spring.demo.model.DefinitionResponse;
@@ -248,6 +249,61 @@ public class GeminiFromClientServiceImpl implements GeminiFromClientService {
                 .content();
 
         return new Answer(chatResponse);
+    }
+
+    @Value("classpath:templates/get-key-settings-for-artifact-prompt.st")
+    private Resource keySettingsForArtifactPrompt;
+
+    @Value("classpath:templates/get-generated-artifact-prompt.st")
+    private Resource generatedArtifactPrompt;   
+
+    @Override
+    public Artifact getGeneratedArtifact(ArtifactRequest artifactRequest) {
+        
+        BeanOutputConverter<Artifact> converter = new BeanOutputConverter<>(Artifact.class);
+
+        String listResponse = this.chatClient.prompt()
+                .options(ChatOptions.builder()
+                .model("gemini-2.0-flash")
+                .temperature(1.0)
+                //.topP(1.0)
+                //.topK(30)
+                .maxTokens(2000)
+                //.frequencyPenalty(0.1)
+                //.presencePenalty(0.1)
+                .build())
+                .user(u -> u.text(this.keySettingsForArtifactPrompt)
+                        .params(Map.of("artefatto", artifactRequest.artifact().type().getArtifactType(),
+                                "genere", artifactRequest.artifact().genre(),
+                                "numero", 5)))
+                .templateRenderer(StTemplateRenderer.builder().startDelimiterToken('{')
+                        .endDelimiterToken('}')
+                        .build())
+                .call()
+                .content();       
+        
+        String generatedArtifact = this.chatClient.prompt()
+                .options(ChatOptions.builder()
+                .model("gemini-2.0-flash")
+                .temperature(1.0)
+                //.topP(1.0)
+                //.topK(30)
+                .maxTokens(1024)
+                //.frequencyPenalty(0.1)
+                //.presencePenalty(0.1)
+                .build())
+                .user(u -> u.text(this.generatedArtifactPrompt)
+                        .params(Map.of("lista", listResponse,
+                                "artefatto", artifactRequest.artifact().type(),
+                                "genere", artifactRequest.artifact().genre(),
+                                "formato", converter.getFormat())))
+                .templateRenderer(StTemplateRenderer.builder().startDelimiterToken('{')
+                        .endDelimiterToken('}')
+                        .build())
+                .call()
+                .content();
+        
+                return converter.convert(generatedArtifact);
     }
 
 }

@@ -3,6 +3,7 @@ package it.venis.ai.spring.demo.controllers;
 import org.springframework.web.bind.annotation.RestController;
 
 import it.venis.ai.spring.demo.model.Answer;
+import it.venis.ai.spring.demo.model.Artifact;
 import it.venis.ai.spring.demo.model.ArtifactRequest;
 import it.venis.ai.spring.demo.model.DefinitionRequest;
 import it.venis.ai.spring.demo.model.DefinitionResponse;
@@ -76,6 +77,13 @@ public class QuestionFromClientController {
     public Answer getSuggestionForArtifact(@RequestBody ArtifactRequest artifactRequest) {
 
         return this.geminiService.getSuggestionForArtifact(artifactRequest);
+
+    }
+
+    @PostMapping("/client/generate")
+    public Artifact getGeneratedArtifact(@RequestBody ArtifactRequest artifactRequest) {
+
+        return this.geminiService.getGeneratedArtifact(artifactRequest);
 
     }
 
