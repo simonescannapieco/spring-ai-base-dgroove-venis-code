@@ -478,6 +478,31 @@ collection:
         send: true
         store: true
       rebuildPath: true
+  - url: http://localhost:8080/client/generate
+    name: LLM come generatore di artefatti (ChatClient)
+    meta:
+      id: req_b7558f3322504b8ca88a62dde7d41a08
+      created: 1759488696197
+      modified: 1759488733563
+      isPrivate: false
+      sortKey: -1745941529566.8054
+    method: POST
+    body:
+      mimeType: application/json
+      text: '{"artifact": {"type": "LIBRO", "genre": "fantascienza"}}'
+    headers:
+      - name: Content-Type
+        value: application/json
+      - name: User-Agent
+        value: insomnia/11.0.2
+    settings:
+      renderRequestBody: true
+      encodeUrl: true
+      followRedirects: global
+      cookies:
+        send: true
+        store: true
+      rebuildPath: true
 cookieJar:
   name: Default Jar
   meta:

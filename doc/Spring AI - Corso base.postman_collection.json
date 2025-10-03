@@ -412,6 +412,34 @@
 				}
 			},
 			"response": []
+		},
+		{
+			"name": "LLM come generatore di artefatti (ChatClient)",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\"artifact\": {\"type\": \"LIBRO\", \"genre\": \"fantascienza\"}}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "localhost:8080/client/generate",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"client",
+						"generate"
+					]
+				}
+			},
+			"response": []
 		}
 	]
 }
