@@ -248,7 +248,6 @@ public class GeminiFromClientServiceImpl implements GeminiFromClientService {
                 .content();
 
         return new Answer(chatResponse);
-    
-        }
+    }
 
 }
