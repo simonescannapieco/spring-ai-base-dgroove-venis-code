@@ -156,7 +156,8 @@ public class GeminiFromClientServiceImpl implements GeminiFromClientService {
         
         List<String> stopSequences = Stream.of(" ", "\n").collect(Collectors.toList());
 
-        Sentiment chatResponse = this.chatClient.prompt()
+        Sentiment chatResponse = Sentiment.valueOf(
+                this.chatClient.prompt()
                 .options(ChatOptions.builder()
                 .model("gemini-2.0-flash")
                 .temperature(0.1)
@@ -173,7 +174,8 @@ public class GeminiFromClientServiceImpl implements GeminiFromClientService {
                         .endDelimiterToken('}')
                         .build())
                 .call()
-                .entity(Sentiment.class);
+                .content()
+                );
 
         return new Answer(chatResponse.getSentiment());
 
