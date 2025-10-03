@@ -24,4 +24,6 @@ public interface GeminiFromClientService {
 
     Answer getNERinYAMLForArtifact(ArtifactRequest artifactRequest);
 
+    Answer getSuggestionForArtifact(ArtifactRequest artifactRequest);
+
 }

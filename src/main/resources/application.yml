@@ -16,5 +16,5 @@ spring:
           #max-completion-tokens: 100 
           #frequency-penalty: .2
           #presence-penalty: .2
-          stop-sequences:
-          - 3
+          #stop-sequences:
+          #- 3

@@ -72,4 +72,11 @@ public class QuestionFromClientController {
 
     }
 
+    @PostMapping("/client/advice")
+    public Answer getSuggestionForArtifact(@RequestBody ArtifactRequest artifactRequest) {
+
+        return this.geminiService.getSuggestionForArtifact(artifactRequest);
+
+    }
+
 }
