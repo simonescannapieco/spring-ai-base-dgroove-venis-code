@@ -483,13 +483,22 @@ collection:
     meta:
       id: req_b7558f3322504b8ca88a62dde7d41a08
       created: 1759488696197
-      modified: 1759488733563
+      modified: 1759754095436
       isPrivate: false
       sortKey: -1745941529566.8054
     method: POST
     body:
       mimeType: application/json
       text: '{"artifact": {"type": "LIBRO", "genre": "fantascienza"}}'
+    parameters:
+      - id: pair_d311af8358fe454286467ab6a20355a9
+        name: numChoices
+        value: "10"
+        disabled: false
+      - id: pair_d83e6cea2eb04ac3b79b34c413328a12
+        name: numParagraphs
+        value: "3"
+        disabled: false
     headers:
       - name: Content-Type
         value: application/json
