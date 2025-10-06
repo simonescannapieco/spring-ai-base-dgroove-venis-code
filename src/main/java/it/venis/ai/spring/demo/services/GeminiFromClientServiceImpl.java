@@ -328,7 +328,7 @@ public class GeminiFromClientServiceImpl implements GeminiFromClientService {
                 List<ArtifactGenreResponse> genreResponse = this.chatClient.prompt()
                 .options(ChatOptions.builder()
                 .model("gemini-2.0-flash")
-                .temperature(1.0)
+                .temperature(2.0)
                 //.topP(1.0)
                 //.topK(30)
                 .maxTokens(1024)
