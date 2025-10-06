@@ -6,11 +6,11 @@ import com.fasterxml.jackson.annotation.JsonPropertyDescription;
 
 import it.venis.ai.spring.demo.data.ArtifactType;
 
-public record Artifact(@JsonPropertyDescription("Il titolo dell'opera") String title, 
-                       @JsonPropertyDescription("Il sottotitolo dell'opera") String subtitle, 
-                       @JsonPropertyDescription("Il tipo dell'opera") ArtifactType type, 
-                       @JsonPropertyDescription("Il genere dell'opera") String genre, 
-                       @JsonPropertyDescription("La trama o la recenzione dell'opera") String body) {
+public record Artifact(@JsonPropertyDescription("Il titolo dell'opera") String title,
+        @JsonPropertyDescription("Il sottotitolo dell'opera") String subtitle,
+        @JsonPropertyDescription("Il tipo dell'opera") ArtifactType type,
+        @JsonPropertyDescription("Il genere dell'opera") String genre,
+        @JsonPropertyDescription("La trama o la recensione dell'opera") String body) {
 
     @Override
     public String title() {
