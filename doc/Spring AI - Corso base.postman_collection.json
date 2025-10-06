@@ -450,6 +450,34 @@
 				}
 			},
 			"response": []
+		},
+		{
+			"name": "LLM come predittore di genere (ChatClient)",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\"artifact\": {\"type\": \"LIBRO\", \"body\": \"Neandertal è un viaggio straordinario. Che è iniziato con una fascinazione d’infanzia verso il passato; ha guadagnato slancio con la scoperta della ricchezza del Pleistocene; ed è infine diventato una carriera accademica spesa alla scoperta dell’archeologia dei Neandertal. In questo stesso viaggio, Rebecca Wragg Sykes accompagna anche noi: scavando siti antichi, tenendo in mano gli eleganti manufatti che i Neandertal hanno lasciato, ma anche provando a esplorare – grazie a un amore di lunga data per la letteratura e la poesia come strumenti per evocare luoghi, tempi e sentimenti – connessioni emotive più profonde, attivate dai dettagli sorprendenti che possiamo ricostruire sulle loro vite. Dalla loro scoperta – avvenuta più di 160 anni fa – i Neandertal si sono trasformati, da perdenti dell’albero genealogico umano, in ominini di serie A. Rebecca Wragg Sykes usa la sua esperienza all’avanguardia nella ricerca paleolitica per condividere la nuova comprensione che abbiamo di loro, mettendo da parte il cliché dei bruti vestiti di stracci in una terra desolata e gelida. Ci rivela invece che erano curiosi, intelligenti conoscitori del loro mondo, tecnologicamente inventivi ed ecologicamente adattabili. Soprattutto, sono sopravvissuti con successo per più di 300.000 anni, durante tempi di massicci sconvolgimenti climatici. Pianificazione, cooperazione, altruismo, artigianato, senso estetico, immaginazione, forse anche un desiderio di trascendenza che guarda oltre la mortalità: molto di ciò che ci definisce era anche dei Neandertal, e il loro DNA è ancora dentro di noi. Questo libro fa per i Neandertal quello che Sapiens di Harari ha fatto per noi. Rivelando una storia più profonda e sfumata, dove l’umanità stessa cessa di essere nostra esclusiva prerogativa. E si rivela invece una comune, antichissima eredità condivisa.\"}}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "localhost:8080/client/genre",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"client",
+						"genre"
+					]
+				}
+			},
+			"response": []
 		}
 	]
 }
