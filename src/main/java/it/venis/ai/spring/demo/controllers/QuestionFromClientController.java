@@ -12,6 +12,7 @@ import it.venis.ai.spring.demo.services.GeminiFromClientService;
 
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestBody;
+import org.springframework.web.bind.annotation.RequestParam;
 
 @RestController
 public class QuestionFromClientController {
@@ -81,9 +82,9 @@ public class QuestionFromClientController {
     }
 
     @PostMapping("/client/generate")
-    public Artifact getGeneratedArtifact(@RequestBody ArtifactRequest artifactRequest) {
+    public Artifact getGeneratedArtifact(@RequestBody ArtifactRequest artifactRequest, @RequestParam(required=true,defaultValue="3") Integer choices) {
 
-        return this.geminiService.getGeneratedArtifact(artifactRequest);
+        return this.geminiService.getGeneratedArtifact(artifactRequest, choices);
 
     }
 
