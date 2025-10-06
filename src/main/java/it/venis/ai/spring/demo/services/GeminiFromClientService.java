@@ -29,4 +29,6 @@ public interface GeminiFromClientService {
 
     Artifact getGeneratedArtifact(ArtifactRequest artifactRequest, Integer numChoices, Integer numParagraphs);
 
+    Answer getGenreForArtifact(ArtifactRequest artifactRequest);
+    
 }

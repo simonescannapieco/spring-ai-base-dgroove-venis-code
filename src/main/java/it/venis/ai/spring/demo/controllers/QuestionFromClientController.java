@@ -90,4 +90,11 @@ public class QuestionFromClientController {
 
     }
 
+    @PostMapping("/client/genre")
+    public Answer getGeneratedArtifact(@RequestBody ArtifactRequest artifactRequest) {
+
+        return this.geminiService.getGenreForArtifact(artifactRequest);
+
+    }
+
 }

@@ -1,5 +1,7 @@
 package it.venis.ai.spring.demo.services;
 
+import java.util.ArrayList;
+import java.util.Arrays;
 import java.util.List;
 import java.util.Map;
 import java.util.Objects;
@@ -12,6 +14,7 @@ import org.springframework.ai.converter.BeanOutputConverter;
 import org.springframework.ai.template.st.StTemplateRenderer;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.beans.factory.annotation.Value;
+import org.springframework.core.ParameterizedTypeReference;
 import org.springframework.core.io.Resource;
 import org.springframework.stereotype.Service;
 
@@ -19,9 +22,11 @@ import com.fasterxml.jackson.core.JsonProcessingException;
 import com.fasterxml.jackson.databind.JsonNode;
 import com.fasterxml.jackson.databind.ObjectMapper;
 
+import it.venis.ai.spring.demo.data.ArtifactGenre;
 import it.venis.ai.spring.demo.data.Sentiment;
 import it.venis.ai.spring.demo.model.Answer;
 import it.venis.ai.spring.demo.model.Artifact;
+import it.venis.ai.spring.demo.model.ArtifactGenreResponse;
 import it.venis.ai.spring.demo.model.ArtifactRequest;
 import it.venis.ai.spring.demo.model.DefinitionRequest;
 import it.venis.ai.spring.demo.model.DefinitionResponse;
@@ -309,6 +314,40 @@ public class GeminiFromClientServiceImpl implements GeminiFromClientService {
                 .content();
         
                 return converter.convert(generatedArtifact);
+    }
+
+    @Value("classpath:templates/get-artifact-genre-prompt.st")
+    private Resource artifactGenrePrompt;    
+
+    @Override
+    public Answer getGenreForArtifact(ArtifactRequest artifactRequest) {
+        
+        List<ArtifactGenreResponse> responses = new ArrayList<ArtifactGenreResponse>();
+
+        for (int i = 0; i <5; i++) {
+                List<ArtifactGenreResponse> genreResponse = this.chatClient.prompt()
+                .options(ChatOptions.builder()
+                .model("gemini-2.0-flash")
+                .temperature(1.0)
+                //.topP(1.0)
+                //.topK(30)
+                .maxTokens(1024)
+                //.frequencyPenalty(0.1)
+                //.presencePenalty(0.1)
+                .build())
+                .user(u -> u.text(this.artifactGenrePrompt)
+                        .params(Map.of("descrizione", artifactRequest.artifact().body(),
+                                "artefatto", artifactRequest.artifact().type(),
+                                "generi_possibili", ArtifactGenre.values())))
+                .templateRenderer(StTemplateRenderer.builder().startDelimiterToken('{')
+                        .endDelimiterToken('}')
+                        .build())
+                .call()
+                .entity(new ParameterizedTypeReference<List<ArtifactGenreResponse>>() {});
+
+                responses.addAll(genreResponse);
+        }
+        return new Answer(responses.stream().collect(Collectors.groupingBy(s -> s.genre(), Collectors.counting())).toString());
     }
 
 }
