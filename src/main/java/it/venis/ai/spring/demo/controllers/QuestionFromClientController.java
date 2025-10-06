@@ -82,9 +82,11 @@ public class QuestionFromClientController {
     }
 
     @PostMapping("/client/generate")
-    public Artifact getGeneratedArtifact(@RequestBody ArtifactRequest artifactRequest, @RequestParam(required=true,defaultValue="3") Integer choices) {
+    public Artifact getGeneratedArtifact(@RequestBody ArtifactRequest artifactRequest,
+            @RequestParam(required = true, defaultValue = "3") Integer numChoices,
+            @RequestParam(required = true, defaultValue = "1") Integer numParagraphs) {
 
-        return this.geminiService.getGeneratedArtifact(artifactRequest, choices);
+        return this.geminiService.getGeneratedArtifact(artifactRequest, numChoices, numParagraphs);
 
     }
 

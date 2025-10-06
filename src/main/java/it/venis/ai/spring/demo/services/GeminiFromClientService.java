@@ -27,6 +27,6 @@ public interface GeminiFromClientService {
 
     Answer getSuggestionForArtifact(ArtifactRequest artifactRequest);
 
-    Artifact getGeneratedArtifact(ArtifactRequest artifactRequest, Integer choices);
+    Artifact getGeneratedArtifact(ArtifactRequest artifactRequest, Integer numChoices, Integer numParagraphs);
 
 }

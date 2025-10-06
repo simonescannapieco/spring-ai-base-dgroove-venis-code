@@ -261,7 +261,7 @@ public class GeminiFromClientServiceImpl implements GeminiFromClientService {
     private Resource generatedArtifactPrompt;   
 
     @Override
-    public Artifact getGeneratedArtifact(ArtifactRequest artifactRequest, Integer choices) {
+    public Artifact getGeneratedArtifact(ArtifactRequest artifactRequest, Integer numChoices, Integer numParagraphs) {
         
         BeanOutputConverter<Artifact> converter = new BeanOutputConverter<>(Artifact.class);
 
@@ -279,7 +279,7 @@ public class GeminiFromClientServiceImpl implements GeminiFromClientService {
                         .params(Map.of("artefatto", artifactRequest.artifact().type().getArtifactType(),
                                 "genere", artifactRequest.artifact().genre())))
                 .user(u -> u.text(this.keySettingsForArtifactUserPrompt)
-                        .params(Map.of("numero", choices)))
+                        .params(Map.of("numero", numChoices)))
                 .templateRenderer(StTemplateRenderer.builder().startDelimiterToken('{')
                         .endDelimiterToken('}')
                         .build())
@@ -298,6 +298,7 @@ public class GeminiFromClientServiceImpl implements GeminiFromClientService {
                 .build())
                 .user(u -> u.text(this.generatedArtifactPrompt)
                         .params(Map.of("lista", listResponse,
+                                "numero", numParagraphs,
                                 "artefatto", artifactRequest.artifact().type(),
                                 "genere", artifactRequest.artifact().genre(),
                                 "formato", converter.getFormat())))
