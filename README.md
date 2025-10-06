@@ -10,4 +10,4 @@
 5. Modifica del controllore MVC per servizio Gemini
 6. *Test* delle funzionalità con [Postman](https://github.com/simonescannapieco/spring-ai-base-dgroove-venis-code/blob/16-spring-ai-gemini-step-back-prompting/doc/Spring%20AI%20-%20Corso%20base.postman_collection.json)/[Insomnia](https://github.com/simonescannapieco/spring-ai-base-dgroove-venis-code/blob/16-spring-ai-gemini-step-back-prompting/doc/Spring%20AI%20-%20Corso%20base.insomnia_collection.yaml)
 
-Per ulteriori informazioni, si rimanda al [documento di esercitazione](https://github.com/simonescannapieco/spring-ai-base-dgroove-venis-slides/blob/master/practice/18_spring_ai_gemini_step_back_prompting/out/17_spring_ai_gemini_step_back_prompting_handout.pdf).
+Per ulteriori informazioni, si rimanda al [documento di esercitazione](https://github.com/simonescannapieco/spring-ai-base-dgroove-venis-slides/blob/master/practice/18_spring_ai_gemini_step_back_prompting/out/18_spring_ai_gemini_step_back_prompting_handout.pdf).
