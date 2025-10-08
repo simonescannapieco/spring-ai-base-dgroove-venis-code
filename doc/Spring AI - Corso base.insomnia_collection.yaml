@@ -601,6 +601,41 @@ collection:
         send: true
         store: true
       rebuildPath: true
+  - url: http://localhost:8080/client/evaluate
+    name: LLM come generatore di prompt (ChatClient)
+    meta:
+      id: req_8ec60fd9c0514270a2c90b021412c349
+      created: 1759941797473
+      modified: 1759941820211
+      isPrivate: false
+      sortKey: -1745937104152.4028
+    method: POST
+    body:
+      mimeType: application/json
+      text: "{\"prompt\": \"Informazioni sull'architettura NVIDIA Orin\",
+        \"metric\":\"ROUGE_1\"}"
+    parameters:
+      - id: pair_d311af8358fe454286467ab6a20355a9
+        name: numChoices
+        value: "10"
+        disabled: false
+      - id: pair_d83e6cea2eb04ac3b79b34c413328a12
+        name: numParagraphs
+        value: "3"
+        disabled: false
+    headers:
+      - name: Content-Type
+        value: application/json
+      - name: User-Agent
+        value: insomnia/11.0.2
+    settings:
+      renderRequestBody: true
+      encodeUrl: true
+      followRedirects: global
+      cookies:
+        send: true
+        store: true
+      rebuildPath: true
 cookieJar:
   name: Default Jar
   meta:

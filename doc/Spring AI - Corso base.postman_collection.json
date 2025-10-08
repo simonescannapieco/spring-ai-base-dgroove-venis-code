@@ -506,6 +506,44 @@
 				}
 			},
 			"response": []
+		},
+		{
+			"name": "LLM come generatore di prompt (ChatClient)",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\"artifact\": {\"type\": \"LIBRO\", \"genre\": \"fantascienza\"}}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "localhost:8080/client/generate?numChoices=10&numParagraphs=3",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"client",
+						"generate"
+					],
+					"query": [
+						{
+							"key": "numChoices",
+							"value": "10"
+						},
+						{
+							"key": "numParagraphs",
+							"value": "3"
+						}
+					]
+				}
+			},
+			"response": []
 		}
 	]
 }
