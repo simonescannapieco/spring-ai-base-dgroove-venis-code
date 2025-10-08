@@ -5,6 +5,8 @@ import it.venis.ai.spring.demo.model.Artifact;
 import it.venis.ai.spring.demo.model.ArtifactRequest;
 import it.venis.ai.spring.demo.model.DefinitionRequest;
 import it.venis.ai.spring.demo.model.DefinitionResponse;
+import it.venis.ai.spring.demo.model.PromptEvaluationRequest;
+import it.venis.ai.spring.demo.model.PromptEvaluationResponse;
 import it.venis.ai.spring.demo.model.Question;
 import it.venis.ai.spring.demo.model.TranslationRequest;
 
@@ -33,5 +35,7 @@ public interface GeminiFromClientService {
     Artifact getGeneratedArtifact(ArtifactRequest artifactRequest, Integer numChoices, Integer numParagraphs);
 
     Answer getGenreForArtifact(ArtifactRequest artifactRequest);
+
+    PromptEvaluationResponse getEvaluatedPrompts(PromptEvaluationRequest promptEvaluationRequest);
     
 }

@@ -7,6 +7,8 @@ import it.venis.ai.spring.demo.model.Artifact;
 import it.venis.ai.spring.demo.model.ArtifactRequest;
 import it.venis.ai.spring.demo.model.DefinitionRequest;
 import it.venis.ai.spring.demo.model.DefinitionResponse;
+import it.venis.ai.spring.demo.model.PromptEvaluationRequest;
+import it.venis.ai.spring.demo.model.PromptEvaluationResponse;
 import it.venis.ai.spring.demo.model.Question;
 import it.venis.ai.spring.demo.model.TranslationRequest;
 import it.venis.ai.spring.demo.services.GeminiFromClientService;
@@ -102,6 +104,13 @@ public class QuestionFromClientController {
     public Answer getGeneratedArtifact(@RequestBody ArtifactRequest artifactRequest) {
 
         return this.geminiService.getGenreForArtifact(artifactRequest);
+
+    }
+
+    @PostMapping("/client/evaluate")
+    public PromptEvaluationResponse getEvaluatedPrompts(@RequestBody PromptEvaluationRequest promptEvaluationRequest) {
+
+        return this.geminiService.getEvaluatedPrompts(promptEvaluationRequest);
 
     }
 
