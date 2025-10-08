@@ -1,0 +1,1 @@
+ITA:ciao->ENG:hello,ESP:hola,GER:hallo,FR:bonjour|ITA:casa->ENG:house,ESP:casa,GER:haus,FR:maison|ITA:{lemma}->
