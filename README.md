@@ -1,10 +1,10 @@
 # Spring AI
 ## Generative Artificial Intelligence con Java - Corso base
 
-### *Chain-of-Thought* (CoT) e *Self consistency prompting* per classidficazione artefatto per genere
+### *Chain-of-Thought* (CoT) e *Self consistency prompting* per classificazione artefatto per genere
 
 1. Creazione enumeratore `ArtifactGenre.java` per inserimento lista di generi possibili
-2. Creazione modello `ArtifactGenreresponse.java` per classificazione artefatto e relativa spiegazione
+2. Creazione modello `ArtifactGenreResponse.java` per classificazione artefatto e relativa spiegazione
 3. Creazione *string template* per applicazione della *chain of thought*
 4. Modifiche ad interfaccia ed implementazione del servizio Gemini
 5. Modifica del controllore MVC per servizio Gemini
