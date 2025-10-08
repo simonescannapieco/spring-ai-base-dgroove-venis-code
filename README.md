@@ -3,7 +3,7 @@
 
 ### *Step-back prompting* per generazione nuovi artefatti
 
-1. Modifica modello Artifact.java per inserimento caratteristica genere
+1. Modifica modello `Artifact.java` per inserimento caratteristica genere
 2. Creazione *string template* per ambientazioni chiave nuovo artefatto (*system* e *user*)
 3. Creazione *string template* per generazione artefatto da lista di ambientazioni chiave
 4. Modifiche ad interfaccia ed implementazione del servizio Gemini
