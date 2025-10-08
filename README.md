@@ -3,7 +3,7 @@
 
 ### *Automatic prompting* per raffinamento richieste per *chatbot*
 
-1. Creazione *prompt template* per gemnerazione varianti semantiche (*system* e *user*)
+1. Creazione *prompt template* per generazione varianti semantiche (*system* e *user*)
 2. Creazione modelli `Prompt.java`, `PromptEvaluationRequest.java` e `PromptEvaluationResponse.java` per serializzare e deserializzare richieste al/generazioni dal LLM
 3. Creazione enumeratore `EvaluationMetrics.java` con i possibili algoritmi di valutazione
 4. Modifiche ad interfaccia ed implementazione del servizio Gemini
