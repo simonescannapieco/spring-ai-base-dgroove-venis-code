@@ -7,6 +7,7 @@ import it.venis.ai.spring.demo.model.ArtifactRequest;
 import it.venis.ai.spring.demo.model.DefinitionRequest;
 import it.venis.ai.spring.demo.model.DefinitionResponse;
 import it.venis.ai.spring.demo.model.Question;
+import it.venis.ai.spring.demo.model.TranslationRequest;
 import it.venis.ai.spring.demo.services.GeminiFromClientService;
 
 import org.springframework.web.bind.annotation.PostMapping;
@@ -55,6 +56,13 @@ public class QuestionFromClientController {
     public DefinitionResponse getJSONOutputConverterFormatDefinition(@RequestBody DefinitionRequest definitionRequest) {
 
         return this.geminiService.getJSONOutputConverterFormatDefinitionFromClient(definitionRequest);
+
+    }
+
+    @PostMapping("/client/translate")
+    public Answer getTranslationForLemma(@RequestBody TranslationRequest translationRequest) {
+
+        return this.geminiService.getTranslationForLemma(translationRequest);
 
     }
 

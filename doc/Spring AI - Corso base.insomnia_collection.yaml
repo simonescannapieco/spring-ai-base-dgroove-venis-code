@@ -286,6 +286,34 @@ collection:
         send: true
         store: true
       rebuildPath: true
+  - url: http://localhost:8080/client/translate
+    name: LLM come traduttore (ChatClient)
+    meta:
+      id: req_6a19def8ee3c40c284342f506ca3d0f0
+      created: 1759929722768
+      modified: 1759929785365
+      isPrivate: false
+      sortKey: -1746038886483.665
+    method: POST
+    body:
+      mimeType: application/json
+      text: '{"lemma": "aiuto"}'
+    parameters:
+      - id: pair_5e262921aba847a2938e9c1c528785b1
+        disabled: false
+    headers:
+      - name: Content-Type
+        value: application/json
+      - name: User-Agent
+        value: insomnia/11.0.2
+    settings:
+      renderRequestBody: true
+      encodeUrl: true
+      followRedirects: global
+      cookies:
+        send: true
+        store: true
+      rebuildPath: true
   - url: http://localhost:8080/client/sentiment
     name: LLM come sentiment analyzer (ChatClient)
     meta:

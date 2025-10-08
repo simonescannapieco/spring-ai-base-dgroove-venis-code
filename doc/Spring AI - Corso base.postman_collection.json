@@ -328,6 +328,34 @@
 			},
 			"response": []
 		},
+  		{
+			"name": "LLM come traduttore (ChatClient)",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\"lemma\": \"aiuto\"}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "localhost:8080/client/translate",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"client",
+						"translate"
+					]
+				}
+			},
+			"response": []
+		},
 		{
 			"name": "LLM come sentiment analyzer (ChatClient)",
 			"request": {
