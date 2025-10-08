@@ -8,7 +8,7 @@
     2. Creazione \textit{prompt template} per traduzione da italiano a multilingua 
     3. Modifiche ad interfaccia ed implementazione del servizio Gemini
     4. Modifica del controllore MVC per servizio Gemini
-    5. \textit{Test} delle funzionalità con Postman/Insomnia   
+    5. *Test* delle funzionalità con [Postman](https://github.com/simonescannapieco/spring-ai-base-dgroove-venis-code/blob/13-spring-ai-gemini-implicit-zero-shot-prompting/doc/Spring%20AI%20-%20Corso%20base.postman_collection.json)/[Insomnia](https://github.com/simonescannapieco/spring-ai-base-dgroove-venis-code/blob/13-spring-ai-gemini-implicit-zero-shot-prompting/doc/Spring%20AI%20-%20Corso%20base.insomnia_collection.yaml)
 - *Zero-shot prompting* per *sentiment analysis*
     1. Creazione enumeratori `ArtifactType.java` e `Sentiment.java`
     2. Creazione del modello di artefatto `Artifact.java`
