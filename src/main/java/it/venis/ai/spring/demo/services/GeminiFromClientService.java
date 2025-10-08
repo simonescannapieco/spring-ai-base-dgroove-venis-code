@@ -5,6 +5,7 @@ import it.venis.ai.spring.demo.model.ArtifactRequest;
 import it.venis.ai.spring.demo.model.DefinitionRequest;
 import it.venis.ai.spring.demo.model.DefinitionResponse;
 import it.venis.ai.spring.demo.model.Question;
+import it.venis.ai.spring.demo.model.TranslationRequest;
 
 public interface GeminiFromClientService {
 
@@ -20,6 +21,8 @@ public interface GeminiFromClientService {
 
     DefinitionResponse getJSONOutputConverterFormatDefinitionFromClient(DefinitionRequest definitionRequest);
 
+    Answer getTranslationForLemma(TranslationRequest translationRequest);
+    
     Answer getSentimentForArtifact(ArtifactRequest artifactRequest);
 
     Answer getNERinYAMLForArtifact(ArtifactRequest artifactRequest);
